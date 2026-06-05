@@ -9,9 +9,9 @@
 </head>
 <body data-page="home">
   <header class="site-header">
-    <div class="letterbox">
+    <a href="index.html" class="letterbox" aria-label="Home으로 이동">
       <h1>선박 종류별 입출항 조회</h1>
-    </div>
+    </a>
     <nav class="main-nav" aria-label="주 메뉴">
       <a href="index.html" class="nav-btn" data-page="home">Home</a>
       <a href="content.html" class="nav-btn" data-page="dashboard">Dashboard</a>
@@ -33,14 +33,11 @@
           </p>
           <a href="content.html" class="cta-link">Dashboard에서 그래프 보기</a>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <svg class="hero-ship" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#ffffff" d="M10 55 L60 35 L110 55 L100 62 L20 62 Z"/>
-            <rect fill="#e0f2fe" x="52" y="22" width="16" height="18" rx="2"/>
-            <rect fill="#bae6fd" x="70" y="28" width="12" height="12"/>
-          </svg>
-          <div class="wave"></div>
-          <div class="wave"></div>
+        <div class="hero-visual hero-slideshow" aria-label="선박 사진 슬라이드">
+          <div class="hero-slideshow-viewport">
+            <img class="hero-slide is-active" src="images/ships/full-container.jpg" alt="풀 컨테이너선">
+            <img class="hero-slide is-idle" src="" alt="" aria-hidden="true">
+          </div>
         </div>
       </section>
 
@@ -71,5 +68,6 @@
 
   <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/hero-slideshow.js"></script>
 </body>
 </html>
